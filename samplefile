@@ -1,3 +1,9 @@
+
 Hello sameple repo to pratice on git cmd's
 
+<<<<<<< HEAD
 hello
+=======
+me new branch code from master
+praticeing on brabch stat
+>>>>>>> 6886ebe79b9221ee5a7d3f629be768a821c460e0
