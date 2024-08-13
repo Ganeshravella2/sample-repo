@@ -27,3 +27,10 @@ While most of the inheritance is fine, it also inherits unwanted elements like `
 To prevent this, the project POM contains empty overrides for these elements.
 If you manually switch to a different parent and actually want the inheritance, you need to remove those overrides.
 
+TO run this from local machine you need use below command.
+mvn spring-boot:run 
+
+By default it will run on the 8080 port, in case port utilizting for others you can override port using below command
+mvn spring-boot:run -Dspring-boot.run.arguments=--server.port=9090
+
+
