@@ -10,7 +10,7 @@ public class HomeController {
     // Mapping for "/home"
     @GetMapping("/home")
     public String home() {
-        return "Welcome to the Home Page!";
+        return "Welcome to the Ganesh DevOps session!";
     }
 
     // Mapping for "/api/v1/resource"
