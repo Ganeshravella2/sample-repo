@@ -31,6 +31,28 @@ TO run this from local machine you need use below command.
 mvn spring-boot:run 
 
 By default it will run on the 8080 port, in case port utilizting for others you can override port using below command
+
 mvn spring-boot:run -Dspring-boot.run.arguments=--server.port=9090
 
+
+
+nohup  java -Xmx1024m -jar spring-boot-0.0.1-SNAPSHOT.jar &   ===>> By default it's running on 8080 port.
+
+
+
+sudo systemctl start nginx
+
+
+server {
+    listen 80;
+    server_name 34.217.78.244;  # Replace with your domain or use _ for default server
+
+    location / {
+        proxy_pass http://localhost:8080;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+    }
+}
 
